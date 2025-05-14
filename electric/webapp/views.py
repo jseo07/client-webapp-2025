@@ -42,7 +42,7 @@ def contact_page(request):
             next_url = '/'
         return redirect(next_url)
     return render(request, "webapp/contact_main.html", {
-        "google_maps_api_key":settings.GOOGLE_MAPS_API_KEY,
+        "GOOGLE_MAPS_API_KEY":settings.GOOGLE_MAPS_API_KEY,
     })
 
 def about(request):
