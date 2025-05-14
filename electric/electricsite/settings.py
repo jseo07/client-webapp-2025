@@ -134,6 +134,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'contactformtest11@gmail.com'
-EMAIL_HOST_PASSWORD = 'phng oner egkd zmfn'
-CONTACT_RECIPIENT_EMAIL = 'tjwkddnjs0709@gmail.com'
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+CONTACT_RECIPIENT_EMAIL = os.environ['CONTACT_RECIPIENT_EMAIL']
+GOOGLE_MAPS_API_KEY = os.environ['GOOGLE_MAPS_API_KEY']

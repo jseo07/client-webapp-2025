@@ -41,7 +41,9 @@ def contact_page(request):
         if not url_has_allowed_host_and_scheme(next_url, allowed_hosts={request.get_host()}):
             next_url = '/'
         return redirect(next_url)
-    return render(request, "webapp/contact_main.html")
+    return render(request, "webapp/contact_main.html", {
+        "google_maps_api_key":settings.GOOGLE_MAPS_API_KEY,
+    })
 
 def about(request):
     return render(request, "webapp/about.html")
