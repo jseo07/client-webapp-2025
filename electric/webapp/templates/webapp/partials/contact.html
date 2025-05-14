@@ -1,0 +1,41 @@
+<div class="contact">
+  <div class="contact__header">
+    <p class="contact__title">Contact</p>
+    <p class="contact__desc">
+      To request a quote or make any inquiries, fill out the following form.
+    </p>
+  </div>
+{% load static %}
+  <form class="contact__form" action="{% url 'contact_page' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.get_full_path }}">
+    <div class="contact__field">
+      <label class="contact__label" for="name">Name</label>
+      <input class="contact__input" type="text" id="name" name="name" required>
+    </div>
+
+    <div class="contact__field">
+      <label class="contact__label" for="email">Email</label>
+      <input class="contact__input" type="email" id="email" name="email">
+    </div>
+
+    <div class="contact__field">
+      <label class="contact__label" for="phone">Phone</label>
+      <input class="contact__input" type="text" id="phone" name="phone" required>
+    </div>
+
+    <div class="contact__field">
+      <label class="contact__label" for="message">Message</label>
+      <textarea class="contact__input contact__textarea" id="message" name="message" required></textarea>
+    </div>
+
+    {% if messages %}
+      <ul class="contact__success_list">
+        {% for msg in messages %}
+          <li class="contact__success_message">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <button class="contact__btn" type="submit">Submit</button>
+  </form>
+</div>

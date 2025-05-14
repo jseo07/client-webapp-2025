@@ -1,0 +1,26 @@
+<section class="service-detail">
+  <!-- Hero / Title -->
+  <div class="service-detail__header">
+    <h1 class="service-detail__title">{{ title }}</h1>
+    <p class="service-detail__subtitle">{{ subtitle }}</p>
+  </div>
+
+  <!-- Main Image -->
+  <div class="service-detail__image">
+    <img src="{{ image }}" alt="Illustration of Service">
+  </div>
+
+  <!-- Full Description -->
+  <div class="service-detail__content">
+    <p class="service-detail__description">
+      {{ desc }}
+    </p>
+  </div>
+</section>
+<section class="about-cta">
+  <h2 class="about-cta__heading">Ready to Work With Us?</h2>
+  <p class="about-cta__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.
+  </p>
+  <a href="{% url 'contact_page' %}" class="about-cta__button">Contact Us</a>
+</section>

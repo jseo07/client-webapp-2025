@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Home – MyApp{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'webapp/css/_service_card.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/info_section.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/index_cascade.css' %}">
+{% endblock %}
+{% block content %}
+
+<!-- Services Slider -->
+<section class="services-slider">
+    <button class="slider-control slider-prev" aria-label="Previous">‹</button>
+  
+    {% static 'webapp/images/sample1.jpg' as sample1_url %}
+    {% static 'webapp/images/sample2.webp' as sample2_url %}
+    {% static 'webapp/images/sample3.jpg' as sample3_url %}
+    {% static 'webapp/images/electric_work.jpg' as electric_work_url %}
+    {% url 'sample_service' as sample_url %}
+
+    <div class="slider-track">
+      <!-- each slide is a separate include -->
+      {% include "webapp/partials/_service_card.html" with image=sample1_url url=sample_url title="Service One" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium." %}
+      {% include "webapp/partials/_service_card.html" with image=sample2_url url=sample_url title="Service two" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
+      {% include "webapp/partials/_service_card.html" with image=sample3_url url=sample_url title="Service three" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
+      {% include "webapp/partials/_service_card.html" with image=sample1_url url=sample_url title="Service Four" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
+      {% include "webapp/partials/_service_card.html" with image=sample2_url url=sample_url title="Service Five" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
+      {% include "webapp/partials/_service_card.html" with image=sample3_url url=sample_url title="Service Six" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
+
+    </div>
+  
+    <button class="slider-control slider-next" aria-label="Next">›</button>
+  </section>
+<!-- Services Slider END -->
+
+
+<!-- Info Part -->
+<section class="info-section">
+  {% include "webapp/partials/info_section.html" with image=electric_work_url %} 
+</section>
+ <!-- Info Part End -->
+
+
+<!-- Contact Form -->
+<div class="contact-container">
+  {% include "webapp/partials/contact.html" %}
+</div>
+
+
+<!-- Contact Form END -->
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const track      = document.querySelector('.slider-track');
+      const slides     = Array.from(track.children);
+      const prevButton = document.querySelector('.slider-prev');
+      const nextButton = document.querySelector('.slider-next');
+      let   currentIndex = 0;
+    
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length
+        updateSlider()
+      })
+
+    
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length
+        updateSlider()
+        })
+
+    })
+</script>
+{% endblock %}

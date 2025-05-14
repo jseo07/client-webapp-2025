@@ -1,0 +1,37 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2) apply to each section wrapper, start hidden/off-position */
+.about-hero,
+.about-values,
+.about-cta,
+.about-testimonials {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* 3) stagger the delays for a cascade */
+.about-hero {
+  animation-delay: 0.2s;
+}
+.about-values {
+  animation-delay: 0.4s;
+}
+.about-cta {
+  animation-delay: 0.6s;
+}
+.about-testimonials {
+  animation-delay: 0.8s;
+}

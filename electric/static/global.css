@@ -1,0 +1,350 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+main {
+    flex: 1;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+
+/* HEADER / NAVBAR ----------------------------------------------------- */
+.header-area{
+    position:fixed;             /* stick to the top */
+    top:0;left:0;width:100%;
+    z-index:999;
+}
+.navbar{
+    background:black;         /* dark blue‑gray */
+    color:#fff;
+    padding:.5rem 1rem;
+}
+
+.navbar.scrolled {
+    background-color: #fff;     /* white */
+}
+.navbar .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    max-width: 1200px;    /* adjust to taste */
+    margin: 0 auto;       /* center when wider than 1200px */
+    padding: 1rem 2rem;
+}
+  
+.header-area,
+.header-area .navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-area.scrolled {
+    background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,1) 60%,
+    rgba(255,255,255,0) 100%
+  );
+
+  }
+  .header-area.scrolled .navbar {
+    background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,1) 60%,
+    rgba(255,255,255,0) 100%
+  );
+      /* override .navbar’s default */
+  }
+  
+  /* text and icon colors when scrolled */
+  .header-area.scrolled .navbar-brand,
+  .header-area.scrolled .nav-link,
+  .header-area.scrolled .dropdown-item,
+  .header-area.scrolled .menu-icon-bar {
+    color: #000 !important;       /* force black text/icons */
+    background-color: transparent!important;
+  }
+  
+  /* if you have hover-highlights, you can also adjust them */
+  .header-area.scrolled .nav-link:hover {
+    color: #ffd700 !important;
+  }
+
+
+/* BRAND --------------------------------------------------------------- */
+.navbar-brand{
+    color:#fff;
+    font-weight:300;
+    font-size:2rem;
+    text-decoration:none;
+}
+
+.header-area.scrolled .navbar-brand{
+    font-size: 1.3rem;
+}
+
+/* TOGGLER (mobile “hamburger”) --------------------------------------- */
+.navbar-toggler{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    display:none;                /* hidden on ≥ 768 px */
+}
+.menu-icon-bar{
+    display:block;
+    width:22px;height:2px;
+    margin:4px 0;
+    background:#fff;
+    transition:.3s;
+}
+
+/* NAV LINKS ----------------------------------------------------------- */
+.navbar-nav{
+    list-style:none;
+    display:flex;
+    gap:2rem;                    /* horizontal spacing */
+}
+
+.navbar-nav > li > a.nav-link {
+    transition: color 0.4s ease, background-color 0.4s ease;
+    /*                  ^ time   ^ easing curve (feel free to tweak) */
+}
+
+.nav-item .nav-link{
+    color:#fff;
+    text-decoration:none;
+    padding:.5rem .75rem;
+    transition:.25s;
+}
+.navbar-nav > li > a.nav-link:hover,
+.navbar-nav > li > a.nav-link:focus {
+    color: #ffd700 !important;     /* gold               */
+    text-decoration: none;         /* keep underline off */
+}
+
+/* DROPDOWN ------------------------------------------------------------ */
+.dropdown{position:relative}
+
+#main-nav a{
+    color: #fff;           /* white text */
+    text-decoration: none;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:100%;left:0;
+    background:#b68d40;
+    padding:.5rem 0;
+    min-width:180px;
+    display:none;
+    transition: 0.3s;
+    font-weight: 300;
+}
+
+
+.dropdown-item{
+    display:block;
+    padding:.5rem 1rem;
+    color:#fff;
+    text-decoration:none;
+    transition: color 0.4s ease,             /* smooth colour change   */
+                background-color 0.4s ease;  /* (and any bg highlight) */
+
+}
+
+.dropdown-item:hover{background:rgba(255,255,255,.15)}
+.dropdown:hover .dropdown-menu{display:block} /* show on hover */
+
+/* FOOTER -------------------------------------------------------------- */
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;                  /* spacing between brand & contact blocks */
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;             /* center the content container */
+  padding: 2rem 1rem;
+
+
+  background: transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+}
+
+.footer-content a{
+    text-decoration:none;
+    color: black;
+    transition: 0.3s;
+}
+
+.footer-content a:hover{
+    color: #ffd700;
+}
+
+/* optional smaller max-widths for each block */
+.footer-brand,
+.footer-contact {
+  max-width: 300px;
+}
+
+/* footer bottom copyright line */
+.footer-bottom {
+  margin-top: 0.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+
+}
+.footer-bottom__copy {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  display: inline-block;
+  margin: 0 auto;
+
+}
+
+.footer-brand__name{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+}
+
+.footer-contact__title{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+}
+
+.footer-contact__list {
+    list-style: none;   /* remove bullets */
+    margin: 0;          /* remove default indent margin */
+    padding: 0;         /* remove default indent padding */
+    font-weight: 300;
+  }
+
+/* MOBILE -------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+     /* show the toggler at all times */
+     .navbar-toggler{display:block;transition:.3s}
+
+     /* menu closed ............................ */
+     #main-nav           {display:none;width:100%}
+ 
+     /* menu OPEN ................................ */
+     #main-nav.show      {display:block;position:relative}
+ 
+     /* centre the links */
+     .navbar-nav{
+         flex-direction:column;
+         align-items:center;      /* <‑‑ centre horizontally */
+         gap:.75rem;
+         padding:1rem 0;
+         text-align:center;
+     }
+     .nav-item .nav-link,
+     .dropdown-item       {width:100%}
+     .dropdown-menu       {position:static}
+ 
+     .navbar-toggler{
+        display:block;          /* you already have this */
+        align-self:center;      /* guarantees vertical centering in the flex row */
+    }
+
+     /*  ➜  toggler INSIDE the open dropdown, top‑right  */
+     .navbar-toggler.open{
+         position:absolute;       /* anchor to #main-nav */
+         right:1rem;
+         top:50%;                /* halfway down the parent (#main-nav) */
+        transform:translateY(-50%);
+     }
+
+     .navbar .dropdown-menu{
+        margin-top: 0.5rem;         /* extra gap between link & box   */
+    }
+
+    .header-area.scrolled .menu-icon-bar {
+        background-color: #000 !important;
+      }
+
+      .navbar-brand {
+        font-size: 1.3rem;
+      }
+
+      .footer-bottom__copy {
+        font-size: 0.7rem;
+      
+      }
+      
+      .footer-brand__name{
+          font-size: 1.1rem;
+          font-weight: 400;
+          padding-bottom: 0.2rem;
+      }
+      
+      .footer-contact__title{
+          font-size: 1.1rem;
+          font-weight: 400;
+          padding-bottom: 0.2rem;
+      }
+
+      .footer-brand__description{
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+
+      .footer-contact__item{
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+      
+}
+
+/* BUTTONS GENERAL -------------------------------------------------------------- */
+
+
+@media (min-width: 769px) {
+
+    /* 1. centre the dropdown under its parent <li>  */
+    .navbar .dropdown-menu{
+        left: 50%;                 /* anchor midway across parent */
+        transform: translateX(-50%); /* pull back half its width  */
+        top: 100%;                 /* start at the bottom edge of <li> */
+        margin-top: 1.5rem;         /* extra gap between link & box   */
+        overflow: visible;  
+
+    }
+    .navbar .dropdown-menu::before {
+        content: "";
+        position: absolute;
+        top: calc(-1.5rem);    /* same amount as your margin-top */
+        left: 0;
+        right: 0;
+        height: 1.5rem;        /* covers the gap */
+        /* background: rgba(0,0,0,0.1);  debug: see where it sits */
+      }
+
+      .navbar-brand {
+        padding-left: 4rem;
+      }
+
+      .navbar {
+        padding-right: 4rem;
+      }
+
+
+}
+
+
+/* cream:  #f4ebd0*/
+/* Tan:  #b68d40*/

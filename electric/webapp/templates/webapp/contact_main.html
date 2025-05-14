@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Contact – MyApp{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'webapp/css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/contact_main.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/contact_cascade.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Left Colunmn -->
+<div class="contact-page">
+  <div class="contact-page__form">
+    {% include 'webapp/partials/contact.html' %}
+  </div>
+
+<!-- Right Colunmn -->
+  <div class="contact-page__info">
+    <div class="contact-info__section contact-info__email">
+        <h4>Email</h4>
+        <a href="mailto:jangwonseo079@gmail.com">email@email.com</a>
+    </div>
+    <div class="contact-info__section contact-info__phone">
+        <h4>Phone</h4>
+        <a href="tel:+1234567890">+1 (234) 567-890</a>
+    </div>
+    <div class="contact-info__section contact-info__address">
+        <h4>Address</h4>
+        <p>123 Main St, Vancouver, BC V5M 1G6, Canada</p>
+    </div>
+    <div id="contact-map" class="contact-info__section contact-info__map">
+        <!-- Embed your map here, e.g.: -->
+        <!-- <iframe src="YOUR_MAP_EMBED_URL" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(49.25,-123.1),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("contact-map"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS4l4wTeNDGl0q-Imdl1HMDYWj7_FlgFo&callback=myMap"></script>
+{% endblock %}

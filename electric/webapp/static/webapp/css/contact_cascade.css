@@ -1,0 +1,26 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2) Apply to the two columns */
+.contact-page__form,
+.contact-page__info {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* 3) Stagger their delays for a nice cascade */
+.contact-page__form {
+  animation-delay: 0.2s;
+}
+.contact-page__info {
+  animation-delay: 0.4s;
+}

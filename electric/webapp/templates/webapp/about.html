@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}About Us – MyApp{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'webapp/css/about.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/about_cascade.css' %}">
+{% endblock %}
+{% block content %}
+{% static 'webapp/images/sample1.jpg' as sample1_url %}
+{% static 'webapp/images/quality.png' as quality_url %}
+{% static 'webapp/images/calendar.png' as calendar_url %}
+{% static 'webapp/images/price-tag.png' as price_url %}
+<section class="about-hero">
+  <div class="about-hero__inner">
+    <h1 class="about-hero__title">About Us</h1>
+    <p class="about-hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <img src="{{ sample1_url }}" class="about-image">
+    <p class="about-hero__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio 
+      vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio 
+      vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio 
+      vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
+    </p>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="about-values">
+  <h2 class="about-values__heading">Our Core Values</h2>
+  <div class="values-grid">
+    <div class="value-item">
+      <img src="{{ calendar_url }}" alt="Value 1 icon" class="value-item__icon">
+      <h3 class="value-item__title">Value One</h3>
+      <p class="value-item__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      </p>
+    </div>
+    <div class="value-item">
+      <img src="{{ quality_url }}" alt="Value 2 icon" class="value-item__icon">
+      <h3 class="value-item__title">Value Two</h3>
+      <p class="value-item__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      </p>
+    </div>
+    <div class="value-item">
+      <img src="{{ price_url }}" alt="Value 3 icon" class="value-item__icon">
+      <h3 class="value-item__title">Value Three</h3>
+      <p class="value-item__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      </p>
+    </div>
+    <!-- add more value-item blocks as needed -->
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="about-cta">
+  <h2 class="about-cta__heading">Ready to Work With Us?</h2>
+  <p class="about-cta__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.
+  </p>
+  <a href="{% url 'contact_page' %}" class="about-cta__button">Contact Us</a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="about-testimonials">
+  <h2 class="about-testimonials__heading">What Our Clients Say</h2>
+  <ul class="testimonials-list">
+    <li class="testimonial-item">
+      <blockquote class="testimonial-item__quote">
+        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.”
+      </blockquote>
+      <p class="testimonial-item__author">— Aaaaaaaa</p>
+    </li>
+    <li class="testimonial-item">
+      <blockquote class="testimonial-item__quote">
+        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.”
+      </blockquote>
+      <p class="testimonial-item__author">— Bbbbbbbbb</p>
+    </li>
+    <!-- add more testimonial-item blocks as needed -->
+  </ul>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

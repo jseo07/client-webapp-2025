@@ -1,0 +1,74 @@
+#services {
+    position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;                         /* span the entire viewport width */
+  margin-left: -50vw;                   /* shift back by half the viewport */
+  margin-right: -50vw;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;               /* include padding in the width */
+  margin-top: 5rem;
+}
+
+#services .container {
+max-width: 1200px;       /* constrain total width */
+  margin: 0 auto;          
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  align-items: stretch;
+}
+
+.services-section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem;
+}
+
+/* 3) title styling */
+.services-section__title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.services-section__title::after {
+  content: "";
+  display: block;
+  width: 60px;                     /* length of the line */
+  height: 6px;                     /* thickness of the line */
+  background-color: rgba(212, 175, 55);          /* line color */
+  margin-top: 0.5rem;              /* gap between text and line */
+}
+
+/* 4) paragraph styling */
+.services-section__text {
+  font-size: 1rem;
+  line-height: 2;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+/* 5) image responsiveness */
+
+.services-section__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop/scale so it fills both width & height */
+}
+
+@media (max-width: 768px) {
+  #services .container {
+    grid-template-columns: 1fr;  /* single column */
+  }
+  .services-section__image {
+    display: none;
+  }
+}

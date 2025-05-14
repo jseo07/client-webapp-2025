@@ -1,0 +1,115 @@
+.services-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px; 
+    margin: 0 auto;
+  }
+  .slider-track {
+    display: flex;
+    transition: transform .4s ease-in-out;
+  }
+  .slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    max-height: 500px;
+    z-index: 1;
+    margin-top: 3rem;
+  }
+  .slide-image { 
+    width:100%; 
+    height:auto; 
+    display: block;
+  }
+  .slide-title { 
+    margin-top:.5rem; 
+    font-size:1.5rem; 
+    padding: 1rem;
+  }
+  .slide-desc  { 
+    margin: 0;
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .slider-control {
+    position:absolute; top:50%; transform:translateY(-50%);
+    border:none;
+    padding:.5rem; 
+    font-size:2rem; 
+    cursor:pointer;
+    z-index: 2;
+    padding: 1rem 1.25rem;      /* more vertical & horizontal padding */
+    font-size: 4rem;            /* larger arrow */
+    line-height: 1;             /* keep arrow centered in the button */
+    cursor: pointer;
+    background: rgba(245, 245, 245, 0.0);
+    transition: color 0.2s ease;
+    color: white;
+  }
+
+  .slider-control:hover {
+    color: #D4AF37;
+  }
+
+  .slider-prev { left:1rem; }
+  .slider-next { right:1rem; }
+
+  .slide-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* center overlay */
+    background: rgba(245, 245, 245, 0.85);     /* semi-transparent dark gray */
+    padding: 1rem 2rem;
+    color: black;
+    width: 60%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide-infobutton {
+    background-color: #D4AF37;       /* clean gold */
+    color: #FFFFFF;                  /* white text */
+    border: none;
+    padding: 0.75rem 1.5rem;         /* vertical/horizontal spacing */
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: inline-block;           /* shrink to content */
+    text-align: center;
+    max-width: 130px;
+    width: 50%;
+  }
+  
+  @media (max-width: 870px) {
+    .slide-infobutton {
+      font-size: 0.8rem;
+      max-width: 150px;
+      width: 80%;
+    }
+    .slide-desc{
+      display: none;
+
+    }
+  }
+
+  .slide-infobutton p {
+    margin: 0;                       /* remove default paragraph margin */
+  }
+  
+  .slide-infobutton:hover {
+    background-color: #B7952D;       /* slightly darker on hover */
+  }
+  
+  .slide-infobutton:active {
+    transform: scale(0.98);          /* subtle press feedback */
+  }

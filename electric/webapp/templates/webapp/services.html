@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Services – MyApp{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'webapp/css/services.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/services_cascade.css' %}">
+{% endblock %}
+{% block content %}
+
+{% static 'webapp/images/sample1.jpg' as sample1_url %}
+{% static 'webapp/images/sample2.webp' as sample2_url %}
+{% static 'webapp/images/sample3.jpg' as sample3_url %}
+
+
+<section class="services">
+    <h1 class="services__title">Services</h1>
+    <div class="services__grid">
+      <a href="{% url 'sample_service' %}" class="services__item">
+        <img src="{{ sample1_url }}" alt="Service One" class="services__img">
+        <h2 class="services__item-title">Service One</h2>
+      </a>
+
+      <a href="{% url 'sample_service' %}" class="services__item">
+        <img src="{{ sample2_url }}" alt="Service Two" class="services__img">
+        <h2 class="services__item-title">Service Two</h2>
+      </a>
+
+      <a href="{% url 'sample_service' %}" class="services__item">
+        <img src="{{ sample3_url }}" alt="Service Three" class="services__img">
+        <h2 class="services__item-title">Service Three</h2>
+      </a>
+
+      <a href="{% url 'sample_service' %}" class="services__item">
+        <img src="{{ sample1_url }}" alt="Service Three" class="services__img">
+        <h2 class="services__item-title">Service Four</h2>
+      </a>
+
+      <a href="{% url 'sample_service' %}" class="services__item">
+        <img src="{{ sample2_url }}" alt="Service Three" class="services__img">
+        <h2 class="services__item-title">Service Five</h2>
+      </a>
+
+      <a href="{% url 'sample_service' %}" class="services__item">
+        <img src="{{ sample3_url }}" alt="Service Three" class="services__img">
+        <h2 class="services__item-title">Service Six</h2>
+      </a>
+    </div>
+  </section>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
