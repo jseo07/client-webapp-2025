@@ -235,6 +235,11 @@ main {
 /* MOBILE -------------------------------------------------------------- */
 @media (max-width: 768px) {
 
+      main {
+            width: 100%;
+            margin: 0;
+          }
+
      /* show the toggler at all times */
      .navbar-toggler{display:block;transition:.3s}
 
@@ -307,7 +312,6 @@ main {
         font-size: 0.9rem;
         font-weight: 300;
       }
-      
 }
 
 /* BUTTONS GENERAL -------------------------------------------------------------- */

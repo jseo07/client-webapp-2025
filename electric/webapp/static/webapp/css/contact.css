@@ -116,3 +116,13 @@
   font-style: italic;
   font-weight: 300;
 }
+@media (max-width: 768px) {
+  .contact {
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+}
+
+.contact-container{
+  padding: 1rem;
+}
+}

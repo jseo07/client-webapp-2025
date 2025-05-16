@@ -24,7 +24,6 @@
 }
 
 .contact-page__form {
-  padding-right: 1.5rem;  /* space between form and line */
 }
 .contact__title {
   font-size: 3rem;
@@ -60,6 +59,7 @@
   align-self: stretch;
   margin: 1rem 2rem;
   padding-top: 7rem;
+  margin-left: 0;
 
 }
 
@@ -116,7 +116,6 @@
 .contact-page__form {
   border-right: none;
   border-bottom: 1px solid #D4AF37;
-  padding-right: 1.5rem;  /* space between form and line */
 }
   
 }

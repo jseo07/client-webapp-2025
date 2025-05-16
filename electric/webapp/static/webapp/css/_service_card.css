@@ -94,12 +94,21 @@
     .slide-infobutton {
       font-size: 0.8rem;
       max-width: 150px;
-      width: 80%;
+      width: 90%;
     }
     .slide-desc{
       display: none;
 
     }
+
+    .slide {
+        padding: 0;
+      }
+
+    .slide-title { 
+      font-size:1rem; 
+      padding: 0.5rem;
+  }
   }
 
   .slide-infobutton p {
