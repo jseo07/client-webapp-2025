@@ -2,7 +2,10 @@
 <header class="header-area overlay">
     <nav class="navbar navbar-expand-md navbar-dark">
 		<div class="container">
-            <a href="{% url 'index' %}" class="navbar-brand">Logo Here</a>
+            <a href="{% url 'index' %}" class="navbar-brand">
+				<!--<img class="footer-logo" id="site-logo" src="{% static 'images/logo_black.png' %}" alt="logo">-->
+				Smartmove
+			</a>
 			
 			<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
 				<span class="menu-icon-bar"></span>
@@ -36,7 +39,10 @@
 <script>
     const toggler = document.querySelector('.navbar-toggler');
     const mainNav = document.getElementById('main-nav');
-    
+    //const logoBlack = "{% static 'images/logo_black.png' %}";
+	//const logoColor = "{% static 'images/logo.png' %}";
+	//const logoEl    = document.getElementById('site-logo');
+
     toggler.addEventListener('click', () => {
         mainNav.classList.toggle('show');   // show / hide the links
         toggler.classList.toggle('open');   // re‑position the button
@@ -46,8 +52,11 @@
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
+	  //logoEl.src = logoColor;
     } else {
       header.classList.remove('scrolled');
+	  //logoEl.src = logoBlack;
+
     }
   });
 </script>

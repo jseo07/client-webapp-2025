@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'webapp/css/contact.css' %}">
 <link rel="stylesheet" href="{% static 'webapp/css/info_section.css' %}">
 <link rel="stylesheet" href="{% static 'webapp/css/index_cascade.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/partnerships.css' %}">
 {% endblock %}
 {% block content %}
 
@@ -16,18 +17,13 @@
     {% static 'webapp/images/sample1.jpg' as sample1_url %}
     {% static 'webapp/images/sample2.webp' as sample2_url %}
     {% static 'webapp/images/sample3.jpg' as sample3_url %}
-    {% static 'webapp/images/electric_work.jpg' as electric_work_url %}
     {% url 'sample_service' as sample_url %}
 
     <div class="slider-track">
       <!-- each slide is a separate include -->
-      {% include "webapp/partials/_service_card.html" with image=sample1_url url=sample_url title="Service One" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium." %}
-      {% include "webapp/partials/_service_card.html" with image=sample2_url url=sample_url title="Service two" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
-      {% include "webapp/partials/_service_card.html" with image=sample3_url url=sample_url title="Service three" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
-      {% include "webapp/partials/_service_card.html" with image=sample1_url url=sample_url title="Service Four" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
-      {% include "webapp/partials/_service_card.html" with image=sample2_url url=sample_url title="Service Five" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
-      {% include "webapp/partials/_service_card.html" with image=sample3_url url=sample_url title="Service Six" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae condimentum quam. Pellentesque dictum tellus et quam sagittis, non tincidunt dolor pretium" %}
-
+      {% include "webapp/partials/_service_card.html" with image=sample1_url url=sample_url title="Smart Homes, Smarter Living" desc="Experience convenience and control like never before. We design and install seamless smart home systems tailored to your lifestyle." %}
+      {% include "webapp/partials/_service_card.html" with image=sample2_url url=sample_url title="Reliable Electrical Expertise" desc="From complete home wiring to smart automation, our certified electricians deliver safe, professional results—on time and on budget." %}
+      {% include "webapp/partials/_service_card.html" with image=sample3_url url=sample_url title="Your Home, Upgraded" desc="Whether you&#39;re renovating or building new, we’re here to elevate your home with the latest in technology and design." %}
     </div>
   
     <button class="slider-control slider-next" aria-label="Next">›</button>
@@ -37,14 +33,36 @@
 
 <!-- Info Part -->
 <section class="info-section">
+  {% static 'webapp/images/top-image.png' as electric_work_url %}
   {% include "webapp/partials/info_section.html" with image=electric_work_url %} 
 </section>
  <!-- Info Part End -->
 
+ <!-- Info Part -->
+<section class="partnership-section" style="padding:2rem 1rem;">
+  {% static 'webapp/images/partner1.png' as partner1 %}
+  {% static 'webapp/images/partner2.png' as partner2 %}
+  {% static 'webapp/images/partner3.png' as partner3 %}
+  {% static 'webapp/images/partner4.png' as partner4 %}
+  {% static 'webapp/images/partner5.png' as partner5 %}
+  {% static 'webapp/images/partner6.png' as partner6 %}
+  {% static 'webapp/images/partner7.png' as partner7 %}
+  {% static 'webapp/images/partner8.png' as partner8 %}
+
+  {% include "webapp/partials/partnerships.html" with img1=partner1 img2=partner2 img3=partner3 img4=partner4 img5=partner5 img6=partner6 img7=partner7 img8=partner8 %}
+</section>
+ <!-- Info Part End -->
 
 <!-- Contact Form -->
 <div class="contact-container">
-  {% include "webapp/partials/contact.html" %}
+  <section class="cta-banner">
+  <p>
+    Want a custom solution? 
+    <a href="{% url 'contact_page' %}">Contact us</a> 
+    and let’s design your ideal smart home.
+  </p>
+</section>
+
 </div>
 
 

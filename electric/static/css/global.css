@@ -165,6 +165,9 @@ main {
 
 /* FOOTER -------------------------------------------------------------- */
 
+.footer-logo{
+  width: 80px;
+}
 .footer-content {
   display: flex;
   justify-content: center;
@@ -282,9 +285,6 @@ main {
         background-color: #000 !important;
       }
 
-      .navbar-brand {
-        font-size: 1.3rem;
-      }
 
       .footer-bottom__copy {
         font-size: 0.7rem;
