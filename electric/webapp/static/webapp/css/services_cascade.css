@@ -9,8 +9,8 @@
   }
 }
 
-/* 2) apply to each service item, start hidden/off-position */
-.services__item {
+/* 2) apply to inner wrapper, start hidden/off-position */
+.services__item-inner {
   opacity: 0;
   transform: translateY(20px);
   animation-name: fadeInUp;
@@ -20,9 +20,9 @@
 }
 
 /* 3) stagger them via nth-child */
-.services__grid > .services__item:nth-child(1) { animation-delay: 0.2s; }
-.services__grid > .services__item:nth-child(2) { animation-delay: 0.3s; }
-.services__grid > .services__item:nth-child(3) { animation-delay: 0.4s; }
-.services__grid > .services__item:nth-child(4) { animation-delay: 0.5s; }
-.services__grid > .services__item:nth-child(5) { animation-delay: 0.6s; }
-.services__grid > .services__item:nth-child(6) { animation-delay: 0.7s; }
+.services__grid > .services__item:nth-child(1) .services__item-inner { animation-delay: 0.2s; }
+.services__grid > .services__item:nth-child(2) .services__item-inner { animation-delay: 0.3s; }
+.services__grid > .services__item:nth-child(3) .services__item-inner { animation-delay: 0.4s; }
+.services__grid > .services__item:nth-child(4) .services__item-inner { animation-delay: 0.5s; }
+.services__grid > .services__item:nth-child(5) .services__item-inner { animation-delay: 0.6s; }
+.services__grid > .services__item:nth-child(6) .services__item-inner { animation-delay: 0.7s; }

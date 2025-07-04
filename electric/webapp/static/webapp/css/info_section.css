@@ -45,9 +45,9 @@ max-width: 1200px;       /* constrain total width */
 
 /* 4) paragraph styling */
 .services-section__text {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 2;
-  color: #555;
+  color: black;
   margin-bottom: 0.75rem;
 }
 

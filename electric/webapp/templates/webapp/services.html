@@ -7,42 +7,53 @@
 {% endblock %}
 {% block content %}
 
-{% static 'webapp/images/sample1.jpg' as sample1_url %}
-{% static 'webapp/images/sample2.webp' as sample2_url %}
-{% static 'webapp/images/sample3.jpg' as sample3_url %}
+{% static 'webapp/images/service1head.png' as sample1_url %}
+{% static 'webapp/images/service2head.png' as sample2_url %}
+{% static 'webapp/images/service3head.png' as sample3_url %}
+{% static 'webapp/images/service4head.png' as sample4_url %}
+{% static 'webapp/images/service5head.jpg' as sample5_url %}
+
 
 
 <section class="services">
     <h1 class="services__title">Services</h1>
     <div class="services__grid">
       <a href="{% url 'sample_service' %}" class="services__item">
-        <img src="{{ sample1_url }}" alt="Service One" class="services__img">
-        <h2 class="services__item-title">Service One</h2>
+        <div class="services__item-inner">
+          <img src="{{ sample1_url }}" alt="Service One" class="services__img">
+          <h2 class="services__item-title">Smart Home Control</h2>
+        </div>
       </a>
 
       <a href="{% url 'sample_service' %}" class="services__item">
-        <img src="{{ sample2_url }}" alt="Service Two" class="services__img">
-        <h2 class="services__item-title">Service Two</h2>
+        <div class="services__item-inner">
+          <img src="{{ sample2_url }}" alt="Service Two" class="services__img">
+          <h2 class="services__item-title">Home Security Systems</h2>
+        </div>
+        
       </a>
 
       <a href="{% url 'sample_service' %}" class="services__item">
-        <img src="{{ sample3_url }}" alt="Service Three" class="services__img">
-        <h2 class="services__item-title">Service Three</h2>
+        <div class="services__item-inner">
+          <img src="{{ sample3_url }}" alt="Service Three" class="services__img">
+                  <h2 class="services__item-title">Custom Window Shades</h2>
+        </div>
       </a>
 
       <a href="{% url 'sample_service' %}" class="services__item">
-        <img src="{{ sample1_url }}" alt="Service Three" class="services__img">
-        <h2 class="services__item-title">Service Four</h2>
+        <div class="services__item-inner">
+          <img src="{{ sample4_url }}" alt="Service Three" class="services__img">
+          <h2 class="services__item-title">Home Theaters & Media Rooms</h2>
+        </div>
+        
       </a>
 
       <a href="{% url 'sample_service' %}" class="services__item">
-        <img src="{{ sample2_url }}" alt="Service Three" class="services__img">
-        <h2 class="services__item-title">Service Five</h2>
-      </a>
+        <div class="services__item-inner">
+          <img src="{{ sample5_url }}" alt="Service Three" class="services__img">
+          <h2 class="services__item-title">Lighting & Electrical Installations</h2>
+        </div>
 
-      <a href="{% url 'sample_service' %}" class="services__item">
-        <img src="{{ sample3_url }}" alt="Service Three" class="services__img">
-        <h2 class="services__item-title">Service Six</h2>
       </a>
     </div>
   </section>
