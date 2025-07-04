@@ -21,6 +21,7 @@
   .slide-image { 
     width:100%; 
     height:auto; 
+    min-height: 500px;
     display: block;
   }
   .slide-title { 
