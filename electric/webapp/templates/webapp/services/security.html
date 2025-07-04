@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Smart Home Control – Smartmove{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'webapp/css/about.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/service_page.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/service_page_cascade.css' %}">
+
+{% endblock %}
+{% block content %}
+{% static 'webapp/images/lock.jpg' as sample1_url %}
+
+{% include "webapp/partials/service_page.html" with image=sample1_url title="Home Security Systems" subtitle="" desc="Peace of mind with professionally installed cameras, door sensors, and smart locks." %}
+
+{% endblock %}
+{% block extra_js %}
+{% endblock %}

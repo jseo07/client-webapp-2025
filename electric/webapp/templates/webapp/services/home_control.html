@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Smart Home Control – Smartmove{% endblock %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'webapp/css/about.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/service_page.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/service_page_cascade.css' %}">
+
+{% endblock %}
+{% block content %}
+{% static 'webapp/images/home_control.png' as sample1_url %}
+
+{% include "webapp/partials/service_page.html" with image=sample1_url title="Smart Home Control" subtitle="" desc="Control lighting, climate, and entertainment from one app or device. Voice integration and automation schedules included." %}
+
+{% endblock %}
+{% block extra_js %}
+{% endblock %}

@@ -54,3 +54,18 @@ def services(request):
 
 def sample_service(request):
     return render(request, "webapp/services/sample_service.html")
+
+def home_control(request):
+    return render(request, "webapp/services/home_control.html")
+
+def security(request):
+    return render(request, "webapp/services/security.html")
+
+def window(request):
+    return render(request, "webapp/services/window.html")
+
+def theater(request):
+    return render(request, "webapp/services/theater.html")
+
+def lighting(request):
+    return render(request, "webapp/services/lighting.html")

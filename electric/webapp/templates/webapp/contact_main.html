@@ -12,22 +12,60 @@
 <!-- Left Colunmn -->
 <div class="contact-page">
   <div class="contact-page__form">
-    {% include 'webapp/partials/contact.html' %}
+    <div class="contact">
+        <div class="contact__header">
+          <p class="contact__title">Get in Touch</p>
+          <p class="contact__desc">
+            Have questions or ready to start your project? Our team is here to help. Reach out to us and we’ll respond within 24 hours.
+          </p>
+        </div>
+      {% load static %}
+        <form class="contact__form" action="{% url 'contact_page' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ request.get_full_path }}">
+          <div class="contact__field">
+            <label class="contact__label" for="name">Name</label>
+            <input class="contact__input" type="text" id="name" name="name" required>
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__label" for="email">Email</label>
+            <input class="contact__input" type="email" id="email" name="email">
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__label" for="phone">Phone</label>
+            <input class="contact__input" type="text" id="phone" name="phone" required>
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__label" for="message">Message</label>
+            <textarea class="contact__input contact__textarea" id="message" name="message" required></textarea>
+          </div>
+
+          {% if messages %}
+            <ul class="contact__success_list">
+              {% for msg in messages %}
+                <li class="contact__success_message">{{ msg }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          <button class="contact__btn" type="submit">Submit</button>
+        </form>
+</div>
+
   </div>
 
 <!-- Right Colunmn -->
   <div class="contact-page__info">
     <div class="contact-info__section contact-info__email">
         <h4>Email</h4>
-        <a href="mailto:jangwonseo079@gmail.com">email@email.com</a>
+        <a href="mailto:smovebc@gmail.com">smovebc@gmail.com</a>
     </div>
     <div class="contact-info__section contact-info__phone">
         <h4>Phone</h4>
-        <a href="tel:+1234567890">+1 (234) 567-890</a>
-    </div>
-    <div class="contact-info__section contact-info__address">
-        <h4>Address</h4>
-        <p>123 Main St, Vancouver, BC V5M 1G6, Canada</p>
+        <a href="tel:7783169920">Tanvir Singh: 778-316-9920</a> <br>
+        <a href="tel:6048493074">Rupinder Dhaliwal: 604-849-3074</a>
     </div>
     <div id="contact-map" class="contact-info__section contact-info__map">
         <!-- Embed your map here, e.g.: -->
@@ -43,7 +81,7 @@
 function myMap() {
 var mapProp= {
   center:new google.maps.LatLng(49.25,-123.1),
-  zoom:5,
+  zoom:9,
 };
 var map = new google.maps.Map(document.getElementById("contact-map"),mapProp);
 }

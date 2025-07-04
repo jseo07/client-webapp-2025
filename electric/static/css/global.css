@@ -37,7 +37,7 @@ main {
     width: 100%;
     max-width: 1200px;    /* adjust to taste */
     margin: 0 auto;       /* center when wider than 1200px */
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
 }
   
 .header-area,
@@ -65,7 +65,7 @@ main {
   }
   
   /* text and icon colors when scrolled */
-  .header-area.scrolled .navbar-brand,
+  .header-area.scrolled .navbar-brand p,
   .header-area.scrolled .nav-link,
   .header-area.scrolled .dropdown-item,
   .header-area.scrolled .menu-icon-bar {
@@ -80,13 +80,29 @@ main {
 
 
 /* BRAND --------------------------------------------------------------- */
-.navbar-brand{
-    color:#fff;
-    font-weight:300;
-    font-size:2rem;
-    text-decoration:none;
+.navbar-brand p{
+    margin: 0 0 0 0.5rem; /* remove default margins and add spacing from the logo */
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
+
+.navbar-brand{
+  display: inline-flex;
+  align-items: center;
+  text-decoration:none;
+  
+}
+
+.title-hover{
+  transition: 0.3s;
+}
+
+.title-hover:hover{
+  color:#ffd700;
+}
 .header-area.scrolled .navbar-brand{
     font-size: 1.3rem;
 }
@@ -166,7 +182,7 @@ main {
 /* FOOTER -------------------------------------------------------------- */
 
 .footer-logo{
-  width: 80px;
+  width: 100px;
 }
 .footer-content {
   display: flex;
@@ -235,6 +251,11 @@ main {
     font-weight: 300;
   }
 
+@media (max-width: 900px) {
+  .inner-title{
+    display: none;
+  }
+  }
 /* MOBILE -------------------------------------------------------------- */
 @media (max-width: 768px) {
 
@@ -352,3 +373,17 @@ main {
 
 /* cream:  #f4ebd0*/
 /* Tan:  #b68d40*/
+
+
+
+.footer-brand {
+  /* shrink-wrap to the width of the text so centering the logo lines up */
+  display: inline-block;
+}
+
+.footer-brand__name,
+.footer-brand__description {
+  margin: 0;
+  /* center the contents (text in the first <p>, logo in the second) */
+  text-align: center;
+}
