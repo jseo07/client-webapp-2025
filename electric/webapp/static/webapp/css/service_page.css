@@ -1,6 +1,6 @@
 /* Container */
 .service-detail {
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 2rem 1rem;
   box-sizing: border-box;
@@ -34,7 +34,6 @@
 .service-detail__image {
   /* Mobile/default: full-width, above the text */
   float: none;
-  width: 100%;
   margin: 0 0 1rem 0;
 }
 .service-detail__image img {
@@ -43,7 +42,9 @@
   display: block;
   border-radius: 6px;
 }
-
+.subheaders{
+  font-size: 1.3rem;
+}
 /* Content */
 .service-detail__content {
   font-size: 1rem;
@@ -51,11 +52,16 @@
   margin-bottom: 2rem;
 }
 
+.service-detail__description{
+  text-align: justify;
+  hyphens: auto;
+}
 /* Wider screens: float the image so text wraps beside it */
 @media (min-width: 768px) {
   .service-detail__image {
     float: left;
-    width: 55%;               /* adjust as needed */
+    width: 50%;               /* adjust as needed */
     margin: 0 2rem 1rem 0;     /* space between image and text */
+    max-width: 600px;
   }
 }

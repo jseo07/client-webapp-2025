@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Smart Home Control – Smartmove{% endblock %}
+{% block title %}Home Security Systems – Smartmove Electrical and Automation{% endblock %}
 {% load static %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'webapp/css/about.css' %}">
@@ -10,7 +10,7 @@
 {% block content %}
 {% static 'webapp/images/lock.jpg' as sample1_url %}
 
-{% include "webapp/partials/service_page.html" with image=sample1_url title="Home Security Systems" subtitle="" desc="Peace of mind with professionally installed cameras, door sensors, and smart locks." %}
+{% include "webapp/partials/service_page.html" with image=sample1_url title="Home Security Systems" subtitle="" desc="<h4 class='subheaders'>Comprehensive Protection</h4><p>Protect what matters most with our tailored Home Security Systems. We offer a full suite of alarms, motion sensors, glass-break detectors, and HD surveillance cameras integrated into a centralized monitoring platform.</p><h4 class='subheaders'>Advanced Monitoring</h4><p>Choose from local video storage, cloud-based recording, or 24/7 professional monitoring. Receive real-time alerts on your smartphone for rapid emergency response, plus geofencing and facial recognition for granular access control.</p><blockquote>With encrypted connections, built-in redundancies, and personalized user profiles, our security systems provide peace of mind and unmatched protection day or night.</blockquote><h4 class='subheaders'>Seamless Integration</h4><p>Our technicians handle system design, installation, and maintenance—ensuring all components communicate flawlessly to deliver a robust defense against intruders.</p>" %}
 
 {% endblock %}
 {% block extra_js %}

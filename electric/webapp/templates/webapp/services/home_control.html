@@ -1,16 +1,18 @@
 {% extends "base.html" %}
-{% block title %}Smart Home Control – Smartmove{% endblock %}
+{% block title %}Smart Home Control – Smartmove Electrical and Automation{% endblock %}
 {% load static %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'webapp/css/about.css' %}">
 <link rel="stylesheet" href="{% static 'webapp/css/service_page.css' %}">
 <link rel="stylesheet" href="{% static 'webapp/css/service_page_cascade.css' %}">
+<link rel="stylesheet" href="{% static 'webapp/css/service_page_exc.css' %}">
+
 
 {% endblock %}
 {% block content %}
 {% static 'webapp/images/home_control.png' as sample1_url %}
 
-{% include "webapp/partials/service_page.html" with image=sample1_url title="Smart Home Control" subtitle="" desc="Control lighting, climate, and entertainment from one app or device. Voice integration and automation schedules included." %}
+{% include "webapp/partials/service_page.html" with image=sample1_url title="Smart Home Control" subtitle="" desc="<p>Transform your living space into a seamless, intuitive environment with our Smart Home Control solutions. We integrate the latest IoT devices—from intelligent thermostats and motorized blinds to voice-activated assistants—into a unified platform that learns your habits over time.</p><h4 class='subheaders'>Automation & Access</h4><p>Set up custom schedules, remote access, and geofencing triggers to automate daily routines, conserve energy, and enhance comfort at the touch of a button. Enjoy real-time updates, advanced scene control, and effortless voice commands for total home connectivity.</p><blockquote>Our expert installers ensure secure, reliable connectivity across all devices while providing in-depth training so you can effortlessly manage your entire home from a single app.</blockquote><h4 class='subheaders'>Anytime, Anywhere</h4><p>Whether you’re at the office or on vacation, personalized automation adapts to your lifestyle—giving you peace of mind and unmatched convenience.</p>" %}
 
 {% endblock %}
 {% block extra_js %}

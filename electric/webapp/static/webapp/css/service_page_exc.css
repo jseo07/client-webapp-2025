@@ -1,0 +1,8 @@
+/* Wider screens: float the image so text wraps beside it */
+@media (min-width: 768px) {
+  .service-detail__image {
+    float: center;
+    width: 35%;               /* adjust as needed */
+    margin: 0 2rem 1rem 0;     /* space between image and text */
+  }
+}

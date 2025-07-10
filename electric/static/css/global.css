@@ -12,7 +12,10 @@ main {
     width: 80%;
     margin: 0 auto;
   }
-
+  
+html, body {
+  overflow-x: hidden;
+}
 
 
 /* HEADER / NAVBAR ----------------------------------------------------- */
@@ -193,12 +196,10 @@ main {
   width: 80%;
   margin: 0 auto;             /* center the content container */
   padding: 2rem 1rem;
-
-
-  background: transparent;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
-
+  color: white;
 }
 
 .footer-content a{
@@ -231,16 +232,19 @@ main {
   margin: 0 auto;
 
 }
+.footer-contact__item a{
+  color: white;
+}
 
 .footer-brand__name{
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 500;
     padding-bottom: 0.2rem;
 }
 
 .footer-contact__title{
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 500;
     padding-bottom: 0.2rem;
 }
 

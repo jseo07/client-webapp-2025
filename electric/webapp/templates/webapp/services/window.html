@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Smart Home Control – Smartmove{% endblock %}
+{% block title %}Custom Window Shades – Smartmove Electrical and Automation{% endblock %}
 {% load static %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'webapp/css/about.css' %}">
@@ -8,9 +8,9 @@
 
 {% endblock %}
 {% block content %}
-{% static 'webapp/images/service3head.png' as sample1_url %}
+{% static 'webapp/images/windowshades.png' as sample1_url %}
 
-{% include "webapp/partials/service_page.html" with image=sample1_url title="Custom Window Shades" subtitle="" desc="Motorized and integrated with your smart home system. Quiet, sleek, and programmable." %}
+{% include "webapp/partials/service_page.html" with image=sample1_url title="Custom Window Shades" subtitle="" desc="<h4 class='subheaders'>Premium Materials & Fit</h4><p>Elevate your interiors with our Custom Window Shades, crafted from premium fabrics and tailored to your exact measurements for flawless fit and operation.</p><h4 class='subheaders'>Smart Integration</h4><p>Control motorized shades via voice commands or scheduling through your Smart Home system. Create preset scenes to adjust light and privacy with a single tap.</p><blockquote>Enjoy enhanced energy efficiency through UV-protective materials that reduce heat gain in summer and improve insulation in winter—while preserving natural light.</blockquote><h4 class='subheaders'>Design & Convenience</h4><p>Choose from a wide range of colors and textures to match any décor, and trust our professional installation for smooth, long-lasting performance.</p>" %}
 
 {% endblock %}
 {% block extra_js %}

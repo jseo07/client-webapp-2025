@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Home – MyApp{% endblock %}
+{% block title %}Home – Smartmove Electrical and Automation{% endblock %}
 {% load static %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'webapp/css/_service_card.css' %}">
@@ -14,7 +14,7 @@
 <section class="services-slider">
     <button class="slider-control slider-prev" aria-label="Previous">‹</button>
   
-    {% static 'webapp/images/image3.jpg' as sample1_url %}
+    {% static 'webapp/images/new-back.png' as sample1_url %}
     {% static 'webapp/images/image2.png' as sample2_url %}
     {% static 'webapp/images/image5.jpg' as sample3_url %}
     {% url 'services' as sample_url %}
@@ -33,7 +33,7 @@
 
 <!-- Info Part -->
 <section class="info-section">
-  {% static 'webapp/images/top-image.png' as electric_work_url %}
+  {% static 'webapp/images/main.jpeg' as electric_work_url %}
   {% include "webapp/partials/info_section.html" with image=electric_work_url %} 
 </section>
  <!-- Info Part End -->
@@ -46,8 +46,8 @@
   {% static 'webapp/images/partner4.png' as partner4 %}
   {% static 'webapp/images/partner5.png' as partner5 %}
   {% static 'webapp/images/partner6.png' as partner6 %}
-  {% static 'webapp/images/partner7.png' as partner7 %}
-  {% static 'webapp/images/partner8.png' as partner8 %}
+  {% static 'webapp/images/partner8.png' as partner7 %}
+  {% static 'webapp/images/partner7.png' as partner8 %}
 
   {% include "webapp/partials/partnerships.html" with img1=partner1 img2=partner2 img3=partner3 img4=partner4 img5=partner5 img6=partner6 img7=partner7 img8=partner8 %}
 </section>

@@ -14,6 +14,12 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+.partnerships .partner {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+}
+
 /* Optional helper classes if you prefer to toggle via class */
 .partners-grid.columns-2 { grid-template-columns: repeat(2, 1fr); }
 .partners-grid.columns-3 { grid-template-columns: repeat(3, 1fr); }
