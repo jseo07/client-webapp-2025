@@ -18,6 +18,11 @@
 <section class="services">
     <h1 class="services__title">Services</h1>
     <div class="services__grid">
+      <a href="{% url 'lighting' %}" class="services__item">
+        <div class="services__item-inner">
+          <img src="{{ sample5_url }}" alt="Service Three" class="services__img">
+          <h2 class="services__item-title">Commercial & Residential Electrical Services</h2>
+        </div>
       <a href="{% url 'home_control' %}" class="services__item">
         <div class="services__item-inner">
           <img src="{{ sample1_url }}" alt="Service One" class="services__img">
@@ -47,12 +52,6 @@
         </div>
         
       </a>
-
-      <a href="{% url 'lighting' %}" class="services__item">
-        <div class="services__item-inner">
-          <img src="{{ sample5_url }}" alt="Service Three" class="services__img">
-          <h2 class="services__item-title">Lighting & Electrical Installations</h2>
-        </div>
 
       </a>
     </div>
